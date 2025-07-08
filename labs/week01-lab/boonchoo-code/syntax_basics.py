@@ -45,6 +45,7 @@ print("Length of full name:", len(full_name))
 num1 = 10
 num2 = 3
 
+
 print("Addition:", num1 + num2)
 print("Subtraction:", num1 - num2)
 print("Multiplication:", num1 * num2)
@@ -77,16 +78,16 @@ print("a =", a, "b =", b, "c =", c)
 # Complete the following assignments:
 
 # String variable containing your favorite color
-favorite_color = 
+favorite_color = 'Pink'
 
 # Integer variable with the current year
-current_year = 
+current_year = 2025
 
 # Float variable with your favorite number (with decimal)
-favorite_number = 
+favorite_number = 27.4
 
 # Boolean variable indicating if you like pizza
-likes_pizza = 
+likes_pizza = True
 
 # Print all variables with descriptive messages
 print("My favorite color is:", favorite_color)
