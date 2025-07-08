@@ -16,6 +16,7 @@ email = input("What is your email? : ")
 phone = int(input("Waht is your phone number? : "))
 hobby = input("What is your favorite hobby? : ")
 
+print("=== Your Proflie ===")
 print("Full name: "+ full)
 print("Age: ", age)
 print("Email: ", email)
