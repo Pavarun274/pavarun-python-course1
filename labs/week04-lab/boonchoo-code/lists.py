@@ -1,5 +1,5 @@
 # Empty list
-empty_list = []
+empty_list = [] #square bracket
 another_empty_list = list()
 
 # List with initial values

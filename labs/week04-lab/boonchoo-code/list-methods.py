@@ -8,7 +8,7 @@ print(f"Count of 1: {numbers.count(1)}")   # 2
 print(f"Count of apple: {fruits.count('apple')}")  # 2
 
 # Finding elements
-print(f"Index of 4: {numbers.index(4)}")   # 2
+print(f"Index of 4(number): {numbers.index(4)}")   # 2
 print(f"Index of banana: {fruits.index('banana')}")  # 1
 
 # Sorting
