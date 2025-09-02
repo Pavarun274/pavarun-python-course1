@@ -7,6 +7,7 @@ return ข้อความต้อนรับในรูปแบบ string
 """
 def welcome_message(name, course):
     # Your Problem 1 solution
+    return f"Welcome {name} to {course} class!"
     pass
 
 """ เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
@@ -18,6 +19,13 @@ return dictionary ที่มี area และ circumference
 
 def calculate_circle(radius):
     # Your Problem 2 solution
+    pi = 3.14159
+    area = pi * radius * radius
+    circumference = 2 * pi * radius
+    return {
+        "area": round(area, 2),
+        "circumference": round(circumference, 2)
+    }
     pass
 
 """ เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
@@ -30,6 +38,12 @@ return string ที่จัดรูปแบบข้อมูลผู้ใ
 
 def create_user_profile(username, age=18, premium=False):
     # Your Problem 3 solution
+    if premium == False:
+        user = "Standard user"
+    else:
+        user = "Premium user"
+
+    return f"{username} (age: {age}) - {user}"
     pass
 
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
@@ -45,7 +59,24 @@ passed: จำนวนคะแนนที่ >= 70 """
 
 def analyze_scores(scores):
     # Your Problem 4 solution
-    pass
+    total = sum(scores)
+    average = total / len(scores)
+    highest = max(scores)
+    lowest = min(scores)
+    passed = 0
+
+    for score in scores:
+        if score >= 70:
+            passed += 1
+        
+    return {
+        "total": total,
+        "average": round(average, 1),
+        "highest": highest,
+        "lowest": lowest,
+        "passed": passed,
+    }
+    pass 
 
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
@@ -54,8 +85,38 @@ def analyze_scores(scores):
 return dictionary ที่มี vowels และ consonants counts
 ไม่สนใจตัวใหญ่ตัวเล็ก (case insensitive) """
 
-def count_vowels_consonants(text):
+def count_vowels_consonants(texts):
     # Your Problem 5 solution
+    text = "I'm Iron Man"
+    text.lower() # i'm iron man
+    text.replace(" ", "") # i'mironman
+    text.replace("0", "")
+    text.replace("1", "")
+    text.replace("2", "")
+    text.replace("3", "")
+    text.replace("4", "")
+    text.replace("5", "")
+    text.replace("6", "")
+    text.replace("7", "")
+    text.replace("8", "")
+    text.replace("9", "")
+
+    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u')
+    consonants = len(text) - vowels
+
+    count_vowel = 0
+    count_consonant = 0
+    vowel = ['a', 'e', 'i', 'o', 'u']
+    for ch in texts.lower():
+        if ch.isalpha():
+            if ch in vowel:
+                count_vowel += 1
+            else:
+                count_consonant += 1
+    return {
+        "vowels counts": count_vowel,
+        "consonants counts": count_consonant
+    }
     pass
 
 # =============================================================================
