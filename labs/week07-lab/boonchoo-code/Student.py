@@ -29,6 +29,6 @@ student2 = Student("Bob", 19, "S002")
 
 # Using methods
 print(student1.introduce())
-print(student1.add_course("Python Programming"))
-print(student1.add_course("Data Structures"))
-print(student1.show_courses())
+print(student1.add_course("Python Programming")) # Python Programming added successfully!
+print(student1.add_course("Data Structures")) # Data Structures added successfully!
+print(student1.show_courses()) # Courses: Python Programming, Data Structures
