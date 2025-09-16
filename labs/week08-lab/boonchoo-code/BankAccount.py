@@ -2,7 +2,7 @@ class BankAccount:
     
     def __init__(self, account_number, initial_balance=0):
         self.account_number = account_number
-        self.__balance = initial_balance  # Private attribute
+        self.__balance = initial_balance  # Private attribute ไม่สามารถเข้าถึงโดยตรงได้
         self.__transaction_history = []   # Private attribute
     
     # Public method to access private balance
@@ -35,7 +35,10 @@ class BankAccount:
 
 # Usage example
 account = BankAccount("12345", 1000)
+account.account_number = "55555" # can
+account.__balance = "10000" # cant
 print(account.get_balance())  # 1000
-account.deposit(500)
-account.withdraw(200)
+print(account.deposit(500))
+print(account.withdraw(200))
+print(account.transaction_history)
 print(account)  # Account 12345: Balance $1300

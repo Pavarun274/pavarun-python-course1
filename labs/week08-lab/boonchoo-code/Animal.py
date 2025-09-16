@@ -18,10 +18,10 @@ class Animal:
 # Child class (Derived class)
 class Dog(Animal):
     def __init__(self, name, breed):
-        super().__init__(name, "Canine")  # Call parent constructor
+        super().__init__(name, "Canine")  # Call parent constructor ใช้ของแม่
         self.breed = breed
     
-    # Method overriding
+    # Method overriding ซ้ำแม่(แทนที่)
     def make_sound(self):
         print(f"{self.name} barks: Woof!")
     
