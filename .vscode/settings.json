@@ -8,6 +8,9 @@
         "strings": false
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "off",
-    "github.copilot.editor.enableAutoCompletions": false
+    "editor.acceptSuggestionOnEnter": "on",
+    "github.copilot.enable": {
+        "*": false
+    },
+    "github.copilot.editor.enableAutoCompletions": false,
 }
