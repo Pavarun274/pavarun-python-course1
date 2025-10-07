@@ -24,14 +24,17 @@ A global variable passing_grade = 50
 passing_grade = 50
 
 def input_students(num_students = 0):
+    students = []
+    for i in range(num_students):
+        student = {}
+        student['name'] = input(f"Enter name student {i + 1}: ")
+        student['scores'] = []
+        for j in range(3):
+            score = int(input(f"Enter score {j+1} for {student['name']}: "))
+            student['scores'].append(score)
+        students.append(student)
+    
     """ students = [
-        {}, {}
-    ]
-    for std in range(num_students):
-        students['name'] = input(f"Enter name student {std + 1}: ")
-        students['scores'] = int(input(f"Enter scores student {std + 1}: "))
-    """
-    students = [
         {
             'name': 'Pavarun',
             'scores': [78, 67, 88]
@@ -40,7 +43,8 @@ def input_students(num_students = 0):
             'name': 'Supawit',
             'scores': [70, 80, 90]
         }
-    ] # Member in this list is dictionaries
+    ]""" # Member in this list is dictionaries
+    
     return students
 
 def calculate_averages(students):
@@ -53,16 +57,18 @@ def calculate_averages(students):
 
 def display_results(students):
     for student in students:
-        print("Name: ", student['name'])
+        print("Name:", student['name'])
         print("Average: %.2f" % student['average'])
         if student['average'] > passing_grade:
             print("Status: PASS")
         else:
-            print("FAIL")
+            print("Status: FAIL")
 
-student_list = input_students()
-student_list = calculate_averages(student_list)
-display_results(student_list)
+# student_list = input_students()
+# student_list = calculate_averages(student_list)
+# display_results(student_list)
 
-# num = input("Enter num of student: ")
-# input_students(num)
+num = int(input("Enter num of student: "))
+students = input_students(num)
+calculate_averages(students)
+display_results(students)
