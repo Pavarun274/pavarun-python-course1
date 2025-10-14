@@ -8,7 +8,6 @@ return ข้อความต้อนรับในรูปแบบ string
 def welcome_message(name, course):
     # Your Problem 1 solution
     return f"Welcome {name} to {course} class!"
-    pass
 
 """ เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
 
@@ -26,7 +25,6 @@ def calculate_circle(radius):
         "area": round(area, 2),
         "circumference": round(circumference, 2)
     }
-    pass
 
 """ เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
 
@@ -44,7 +42,6 @@ def create_user_profile(username, age=18, premium=False):
         user = "Premium user"
 
     return f"{username} (age: {age}) - {user}"
-    pass
 
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
 
@@ -76,7 +73,6 @@ def analyze_scores(scores):
         "lowest": lowest,
         "passed": passed,
     }
-    pass 
 
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
@@ -117,7 +113,6 @@ def count_vowels_consonants(texts):
         "vowels counts": count_vowel,
         "consonants counts": count_consonant
     }
-    pass
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
